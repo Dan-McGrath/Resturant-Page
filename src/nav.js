@@ -1,5 +1,6 @@
 import loadHomepage from "./homepage";
-import createContactPage from "./contact";
+import loadContactPage from "./contact";
+import loadMenu from "./menu";
 
 const loadNav = () => {
     let content = document.querySelector('#content');
@@ -50,7 +51,9 @@ const loadNav = () => {
             if (e.target.id === 'home') {
                 loadHomepage();
             } else if (e.target.id === 'contact') {
-                createContactPage();
+                loadContactPage();
+            } else if (e.target.id === 'menu') {
+                loadMenu()
             }
         }
     }
