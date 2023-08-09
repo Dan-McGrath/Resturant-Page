@@ -1,4 +1,4 @@
-const createContactPage = () => {
+const loadContactPage = () => {
     const content = document.querySelector('#content');
 
     const title = document.createElement('h1');
@@ -7,4 +7,4 @@ const createContactPage = () => {
     content.appendChild(title)
 }
 
-export default createContactPage
+export default loadContactPage
