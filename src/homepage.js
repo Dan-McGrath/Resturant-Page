@@ -21,20 +21,64 @@ const loadHomepage = () => {
         subtitle.textContent = 'Best Food Around!';
         heroDiv.appendChild(subtitle);
 
-
-        // let heroImage = document.createElement('img');
-        // heroImage.classList.add('heroImg');
-
         const myIcon = new Image();
         myIcon.src = Icon;
         heroDiv.appendChild(myIcon);
-
         content.appendChild(heroDiv);
         
     }
 
+
+    const createHoursSection = () => {
+        let hoursSection = document.createElement('section');
+        hoursSection.classList.add('hours-section');
+        
+        let hoursSubtitle = document.createElement('h3');
+        hoursSubtitle.textContent = 'Business Hours';
+        
+        let hoursDiv = document.createElement('div');
+        hoursDiv.classList.add('hours');
+
+        let monday = document.createElement('p');
+        monday.textContent = 'Monday: 12am - 8pm';
+        hoursDiv.appendChild(monday);
+
+        let tuesday = document.createElement('p');
+        tuesday.textContent = 'Tuesday: 12am - 8pm';
+        hoursDiv.appendChild(tuesday);
+
+        let wednesday = document.createElement('p');
+        wednesday.textContent = 'Wednesday: 12am - 8pm';
+        hoursDiv.appendChild(wednesday);
+
+        let thursday = document.createElement('p');
+        thursday.textContent = 'Thursday: 12am - 8pm';
+        hoursDiv.appendChild(thursday);
+
+        let friday = document.createElement('p');
+        friday.textContent = 'Friday: 12am - 8pm';
+        hoursDiv.appendChild(friday);
+
+        let saturday = document.createElement('p');
+        saturday.textContent = 'Saturday: 12am - 8pm';
+        hoursDiv.appendChild(saturday);
+
+        let sunday = document.createElement('p');
+        sunday.textContent = 'Sunday: 12am - 8pm';
+        hoursDiv.appendChild(sunday);
+
+
+        //append to main div
+        hoursSection.appendChild(hoursSubtitle);
+        hoursSection.appendChild(hoursDiv);
+
+        //append section to content
+        content.appendChild(hoursSection)
+    }
+
     createTitle()
     createHeroImage()
+    createHoursSection()
 }
 
 export default loadHomepage
