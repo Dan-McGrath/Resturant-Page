@@ -1,1 +1,4 @@
-console.log('Hello World!')
+import loadHomepage from './homepage';
+import './styles.css';
+
+loadHomepage()
