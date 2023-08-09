@@ -1,3 +1,5 @@
+import Icon from './icon.jpg'
+
 const loadHomepage = () => {
     let content = document.querySelector('#content');
     
@@ -16,13 +18,23 @@ const loadHomepage = () => {
 
         let subtitle = document.createElement('h2');
         subtitle.classList.add('subtitle');
+        subtitle.textContent = 'Best Food Around!';
+        heroDiv.appendChild(subtitle);
 
-        let heroImage = document.createElement('img');
-        heroImage.classList.add('heroImg');
+
+        // let heroImage = document.createElement('img');
+        // heroImage.classList.add('heroImg');
+
+        const myIcon = new Image();
+        myIcon.src = Icon;
+        heroDiv.appendChild(myIcon);
+
+        content.appendChild(heroDiv);
         
     }
 
     createTitle()
+    createHeroImage()
 }
 
 export default loadHomepage
