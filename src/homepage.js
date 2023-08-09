@@ -34,6 +34,7 @@ const loadHomepage = () => {
         hoursSection.classList.add('hours-section');
         
         let hoursSubtitle = document.createElement('h3');
+        hoursSubtitle.classList.add('subtitle');
         hoursSubtitle.textContent = 'Business Hours';
         
         let hoursDiv = document.createElement('div');
@@ -76,9 +77,29 @@ const loadHomepage = () => {
         content.appendChild(hoursSection)
     }
 
+    const createLocationInfo = () => {
+        let locationDiv = document.createElement('div');
+        locationDiv.classList.add('location');
+
+        let subtitle = document.createElement('h3');
+        subtitle.classList.add('subtitle');
+        subtitle.textContent = 'Location';
+
+        let locationInfo = document.createElement('p');
+        locationInfo.textContent = '123 Main St, Orlando Fl, 32789';
+
+        // append elements to div
+        locationDiv.appendChild(subtitle);
+        locationDiv.appendChild(locationInfo);
+
+        // append to content div
+        content.appendChild(locationDiv);
+    }
+
     createTitle()
     createHeroImage()
     createHoursSection()
+    createLocationInfo()
 }
 
 export default loadHomepage
