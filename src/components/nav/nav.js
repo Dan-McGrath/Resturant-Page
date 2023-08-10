@@ -1,6 +1,6 @@
-import loadHomepage from "./homepage";
-import loadContactPage from "./contact";
-import loadMenu from "./menu";
+import loadHomepage from "../home/homepage";
+import loadContactPage from "../contact/contact";
+import loadMenu from "../menu/menu";
 
 const loadNav = () => {
     let content = document.querySelector('#content');

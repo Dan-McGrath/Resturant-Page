@@ -1,7 +1,6 @@
-import loadHomepage from './homepage';
+import loadHomepage from './components/home/homepage';
 import './styles.css';
-import './icon.jpg';
-import loadNav from './nav';
+import loadNav from './components/nav/nav';
 
 loadNav()
 loadHomepage()
